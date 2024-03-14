@@ -4,7 +4,6 @@
 
 int answer[3] = { 0, 0, 0 };
 int strike(int order, int my_num[3], int answer[3]);
-void init();
 
 void init() {
 	int random = 0;
@@ -45,11 +44,8 @@ int main() {
 	printf("%d, %d, %d\n", answer[0], answer[1], answer[2]);
 
 	for (int progress = 0; progress < 9; progress++) {
-		b = 0;
-		s = 0;
-		o = 0;
 
-		printf("¼ýÀÚ 3°³¸¦ ÀÔ·ÂÇÏ¼¼¿ä.\n");
+		printf("ìˆ«ìž 3ê°œë¥¼ ìž…ë ¥í•˜ì„¸ìš”.\n");
 		scanf("%d%d%d", &first_num, &second_num, &third_num);
 		int my_num[3] = { first_num, second_num, third_num };
 
@@ -75,15 +71,15 @@ int main() {
 		printf("s = %d\nb = %d\n0 = %d\n", s, b, o);
 
 		if (s == 3) {
-			progress = 9;
+			break;
 		}
 	}
 
 	if (s == 3) {
-		printf("Åë°úÇÏ¼Ì½À´Ï´Ù.");
+		printf("í†µê³¼í•˜ì…¨ìŠµë‹ˆë‹¤.");
 	}
 	else {
-		printf("½ÇÆÐÇÏ¼Ì½À´Ï´Ù. Á¤´ä : %d %d %d", answer[0], answer[1], answer[2]);
+		printf("ì‹¤íŒ¨í•˜ì…¨ìŠµë‹ˆë‹¤. ì •ë‹µ : %d %d %d", answer[0], answer[1], answer[2]);
 	}
 	return 0;
 }
